@@ -1,10 +1,8 @@
-## 工数管理アプリ ぷろマネ！
+## About
 
-freee の工数管理機能が使えなくなることを受けて、有志で新規開発
+## Skills
 
-## 利用技術
-
-### 言語
+### Language
 
 TypeScript
 
@@ -13,31 +11,29 @@ TypeScript
 - React
 - Next.js 13
 
-### その他
+### Others
 
 - Docker
-- Zustand(ストアマネジメント)
+- Zustand(Store Management)
 
-## ローカルサーバーの起動
+## Run Local Server
 
-### Docker 利用(推奨)
+### With Docker
 
-※ root ディレクトリにいること
-※ Docker アプリを起動していること → 忘れがち
+※ Make sure you're on root directory
+※ Run Docker App
 
 ```bash
-# 初回のみ
 docker-compose build
 docker compose run
 ```
 
-### Docker 不使用(非推奨)
+### Without Docker
 
 ```bash
-git clone <本ページURL>
+git clone https://github.com/yutounun/website.git
 npm i
 npm run dev
-json-server --watch example.json --port 3001
 ```
 
-[http://localhost:3000](http://localhost:3000)で確認
+[http://localhost:3000](http://localhost:3000)
