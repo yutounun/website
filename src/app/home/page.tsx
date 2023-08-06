@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
       <div className="h-screen w-1/2 relative">
-        <Image src="/yuto2.png" alt="Picture of the author" layout="fill" />
+        <Image src="/yuto4.png" alt="Picture of the author" layout="fill" />
       </div>
     </div>
   );
