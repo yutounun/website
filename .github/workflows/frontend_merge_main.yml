@@ -13,3 +13,5 @@ jobs:
     uses: ./.github/workflows/frontend_style_check.yml
   generate_check:
     uses: ./.github/workflows/frontend_build_check.yml
+  deploy:
+    uses: ./.github/workflows/frontend_deploy.yml

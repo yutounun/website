@@ -11,8 +11,8 @@ export default function Home() {
         <div className="px-20">
           <p className="text-white text-2xl font-bold my-5">−Hello</p>
           <p className="text-[3rem] text-white font-bold">
-            Let's stand out from the crowd with me - my name is Yuto and I'm a
-            full-stack developer.
+            Move forward to stand out from the crowd with me - my name is Yuto
+            and I am a full-stack developer.
           </p>
           <p className="text-white text-xl font-bold my-5">
             Patientenzentrisch. Wissenschaftlich fundiert. Digital.
