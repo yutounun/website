@@ -6,29 +6,53 @@ import { GiHumanTarget } from "react-icons/gi";
 
 const Form = () => {
   return (
-    <div className="border border-[#e7e9ee] bg-white rounded-2xl h-full">
+    <div className="border border-[#e7e9ee] bg-white rounded-2xl h-full font-sans">
       <form className="mx-10 my-10 flex flex-wrap justify-center gap-10">
-        <FormInput placeholder="Surname" className="w-72">
+        <FormInput
+          placeholder="Surname"
+          className="w-5/12"
+          inputClassName="w-2/3"
+        >
           <AiOutlineMail />
         </FormInput>
-        <FormInput placeholder="e-mail" className="w-72">
+        <FormInput
+          placeholder="e-mail"
+          className="w-5/12"
+          inputClassName="w-2/3"
+        >
           <GiHumanTarget />
         </FormInput>
-        <FormInput placeholder="phone" className="w-72">
+        <FormInput
+          placeholder="phone"
+          className="w-5/12"
+          inputClassName="w-2/3"
+        >
           <AiOutlinePhone />
         </FormInput>
-        <FormInput placeholder="Pursue" className="w-72">
+        <FormInput
+          placeholder="Pursue"
+          className="w-5/12"
+          inputClassName="w-2/3"
+        >
           <FaRegBuilding />
         </FormInput>
-        <FormInput placeholder="What is it about?" className="w-4/5" />
-        <FormInput placeholder="Your message..." className="w-4/5 h-32" />
+        <FormInput
+          placeholder="What is it about?"
+          className="w-10/12"
+          inputClassName="w-11/12"
+        />
+        <FormInput
+          placeholder="Your message..."
+          className="w-10/12 h-32"
+          inputClassName="w-11/12"
+        />
       </form>
-      <div className="ml-28 mb-10">
-        <p className="mb-10 font-xl text-[#6F278] font-medium font-poppins">
+      <div className="mx-20 mb-10">
+        <p className="mb-10 text-[18px] text-[#6f7278] font-medium ">
           By clicking on send you agree to{" "}
           <a
             href="https://daisyui.com/components/input/"
-            className="font-bold border-b border-b-primary"
+            className="font-bold border-b border-b-primary text-primary"
           >
             our privacy policy
           </a>

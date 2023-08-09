@@ -8,6 +8,7 @@ import { MdMail } from "react-icons/md";
 import Impact from "./Impact";
 import Form from "./Form";
 import { IconContext } from "react-icons";
+import Link from "next/link";
 
 const easing = [0.6, -0.05, 0.01, 0.99];
 const fadeInDown = {
@@ -83,7 +84,7 @@ export default function Home() {
   return (
     <motion.div initial="initial" animate="animate">
       <div className="flex">
-        <div className="h-screen bg-[#1c3534] w-1/2">
+        <div className="h-full bg-[#1c3534] w-1/2 pb-20">
           <Animation
             tag="div"
             variants={fadeInRight}
@@ -105,26 +106,25 @@ export default function Home() {
               and I am a full-stack developer.
             </p>
             <p className="text-white text-xl font-bold my-5">
-              Patientenzentrisch. Wissenschaftlich fundiert. Digital.
+              Stay with client.
             </p>
-            <div className="btn h-5 w-1/3 mt-10 bg-[#fc764d] hover:bg-[hsl(14,99%,60%)] text-white font-poppins">
+            <Link
+              href="https://bucolic-faloodeh-8def2c.netlify.app/"
+              className="btn h-5 w-1/3 mt-10 bg-[#fc764d] hover:bg-[hsl(14,99%,60%)] text-white "
+            >
               Learn more
-            </div>
+            </Link>
           </Animation>
         </div>
-        <Animation
-          tag="div"
-          variants={fadeInDown}
-          className="h-screen w-1/2 relative"
-        >
-          <Image src="/yuto4.png" alt="Picture of the author" layout="fill" />
+        <Animation tag="div" variants={fadeInDown} className="w-1/2 relative">
+          <Image src="/dog.jpeg" alt="Picture of the author" layout="fill" />
         </Animation>
       </div>
       <div className="h-full mx-auto pt-10 px-32">
         <Animation
           tag="p"
           variants={fadeInDown}
-          className="text-2xl font-poppins font-bold mx-auto flex justify-center mb-10"
+          className="text-2xl  font-bold mx-auto flex justify-center mb-10"
         >
           Our partner network - deeply anchored in science and research .
         </Animation>
@@ -159,19 +159,19 @@ export default function Home() {
           ></Image>
         </Animation>
         <Animation tag="div" variants={fadeInUp} className="w-1/2">
-          <div className="w-3/4">
-            <p className="font-bold font-poppins text-[#055F5B] text-lg">
+          <div className="w-3/4 mx-10">
+            <p className="font-bold  text-[#055F5B] text-lg">
               - DIGITAL PATIENT EDUCATION
             </p>
-            <h2 className="font-bold font-poppins text-primary tracking-wide text-4xl my-5">
+            <h2 className="font-bold  text-primary tracking-wide text-4xl my-5">
               Achieve a more confident approach to rheumatism!
             </h2>
-            <p className="font-poppins text-[#6F7278] text-[18px] mb-5">
+            <p className=" text-[#6F7278] text-[18px] mb-5">
               Digital, interactive and based on the latest scientific findings:
               Our courses on rheumatism. We will help you to understand your
               illness better and to learn to deal with it more confidently.
             </p>
-            <ul className="font-poppins text-primary text-[18px] mb-5 font-medium flex flex-col gap-5">
+            <ul className=" text-primary text-[18px] mb-5 font-medium flex flex-col gap-5">
               <li className="flex items-center gap-3">
                 <IconContext.Provider
                   value={{ color: "primary", className: "text-3xl" }}
@@ -202,7 +202,7 @@ export default function Home() {
                 >
                   <AiFillCheckCircle />
                 </IconContext.Provider>
-                In-depth studies on rheumatoid arthritis and Bechterew disease
+                In-depth studies on rheumatoid arthritis
               </li>
             </ul>
             <button className="rounded-full w-1/2 h-16 bg-[#055f5b] text-white hover:bg-[#0c1c1b] mt-5">
@@ -211,9 +211,9 @@ export default function Home() {
           </div>
         </Animation>
       </div>
-      <div className="h-full pb-10 flex pt-10 bg-[#fbf9f8]">
-        <div className="flex justify-center">
-          <div className="w-2/3 flex flex-wrap h-80">
+      <div className="h-full pb-10 flex pt-10 bg-[#fbf9f8] justify-center">
+        <div className="flex justify-center w-1/2">
+          <div className="w-10/12 flex flex-wrap justify-end h-80 gap-10">
             <Impact
               title=">6 million"
               content="Those affected alone in Germany."
@@ -233,17 +233,16 @@ export default function Home() {
           </div>
         </div>
         <div className="w-1/2">
-          <div className="w-2/3">
-            <p className="font-bold text-xl font-poppins">
-              - AN INCREASING PROBLEM
-            </p>
+          <div className="w-8/12 ml-10">
+            <p className="font-bold text-xl ">- AN INCREASING PROBLEM</p>
             <h2 className="text-[38px] leading-12 my-10 font-bold">
               <span className="text-primary">
-                Due to the lack of doctors, patients often
+                Due to the lack of doctors, patients often{" "}
               </span>
-              <span className="text-">
-                cannot be fully informed about their rheumatism .
-              </span>
+              <span className="text-success">
+                cannot be fully informed about their rheumatism
+              </span>{" "}
+              .
             </h2>
             <p className="text-secondary text-xl leading-8 font-medium">
               More and more people are suffering from systemic rheumatic
@@ -258,21 +257,19 @@ export default function Home() {
         <Animation
           tag="div"
           variants={fadeInUp}
-          className="w-1/2 flex justify-center"
+          className="w-5/12 flex justify-center"
         >
-          <div className="w-3/4">
-            <p className="font-bold font-poppins text-[#055F5B] text-lg">
-              - CONTACT
-            </p>
-            <h2 className="w-8/12 font-bold font-poppins text-primary tracking-wide text-4xl my-5">
+          <div className="">
+            <p className="font-bold  text-[#055F5B] text-lg">- CONTACT</p>
+            <h2 className="w-10/12 font-bold  text-primary tracking-wide text-4xl my-5">
               We look forward to hearing your lovely message!
             </h2>
-            <p className=" w-8/12 font-poppins text-[#6F7278] text-[18px] mb-5">
+            <p className=" w-10/12  text-[#6F7278] text-[18px] mb-5">
               Would you like to find out more about us, do you have any
               questions or suggestions? Please send us an email or use our
               contact form.
             </p>
-            <button className="rounded-full w-1/2 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 flex gap-3 items-center">
+            <button className="rounded-full w-7/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 flex gap-3 items-center">
               <IconContext.Provider
                 value={{ color: "white", className: "text-4xl ml-6" }}
               >

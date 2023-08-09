@@ -19,7 +19,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
       <div className="w-1/2 flex justify-end mr-32 my-auto">
         <Link
           href="/home"
-          className={`text-xl ml-7 my-auto font-poppins font-normal hoverhover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white ${
+          className={`text-xl ml-7 my-auto  font-normal hoverhover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white ${
             current === "home" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
@@ -27,7 +27,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
         </Link>
         <Link
           href="/courses"
-          className={`text-xl ml-7 my-auto font-poppins font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
+          className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
             current === "courses" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
@@ -35,7 +35,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
         </Link>
         <Link
           href="/about"
-          className={`text-xl ml-7 my-auto font-poppins font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
+          className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
             current === "about" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
@@ -43,7 +43,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
         </Link>
         <Link
           href="/blog"
-          className={`text-xl ml-7 my-auto font-poppins font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
+          className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
             current === "blog" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >

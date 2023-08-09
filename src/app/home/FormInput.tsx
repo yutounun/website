@@ -3,18 +3,24 @@ import { IconContext } from "react-icons";
 
 type PropTypes = {
   placeholder: string;
+  inputClassName?: string;
   className?: string;
   children?: ReactNode;
 };
 
-const FormInput = ({ placeholder, className, children }: PropTypes) => {
+const FormInput = ({
+  placeholder,
+  className,
+  children,
+  inputClassName,
+}: PropTypes) => {
   return (
     <span
       className={`border border-[#caccd1] bg-white flex justify-between items-center rounded-2xl h-16 ${className}`}
     >
       <input
         type="text"
-        className="w-2/3 h-full ml-3"
+        className={`h-full ml-3 ${inputClassName}`}
         placeholder={placeholder}
       />
       <IconContext.Provider
