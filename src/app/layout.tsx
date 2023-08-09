@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./common/Navbar";
+import Footer from "./common/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div className="flex h-full">
           <main className="w-full">{children}</main>
         </div>
+        <Footer />
       </body>
     </html>
   );

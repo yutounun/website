@@ -3,9 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Animation from "./animation.tsx";
 import CompanyLogo from "./CompanyLogo";
-import { AiFillCheckCircle } from "react-icons/ai";
+import { AiFillCheckCircle, AiOutlineMail } from "react-icons/ai";
+import { MdMail } from "react-icons/md";
 import Impact from "./Impact";
 import Form from "./Form";
+import { IconContext } from "react-icons";
 
 const easing = [0.6, -0.05, 0.01, 0.99];
 const fadeInDown = {
@@ -23,6 +25,18 @@ const fadeInRight = {
   initial: { x: -30, opacity: 0 },
   animate: {
     x: 20,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: easing,
+    },
+  },
+};
+
+const scaleUp = {
+  initial: { scale: 0.4, opacity: 0 },
+  animate: {
+    scale: 1,
     opacity: 1,
     transition: {
       duration: 1.5,
@@ -133,7 +147,7 @@ export default function Home() {
       <div className="h-full mx-auto pt-10 px-32 flex justify-center pb-10">
         <Animation
           tag="div"
-          variants={fadeInDown}
+          variants={scaleUp}
           className="w-1/2 flex items-center justify-center"
         >
           <Image
@@ -145,7 +159,7 @@ export default function Home() {
           ></Image>
         </Animation>
         <Animation tag="div" variants={fadeInUp} className="w-1/2">
-          <div className="w-2/3">
+          <div className="w-3/4">
             <p className="font-bold font-poppins text-[#055F5B] text-lg">
               - DIGITAL PATIENT EDUCATION
             </p>
@@ -159,19 +173,35 @@ export default function Home() {
             </p>
             <ul className="font-poppins text-primary text-[18px] mb-5 font-medium flex flex-col gap-5">
               <li className="flex items-center gap-3">
-                <AiFillCheckCircle />
+                <IconContext.Provider
+                  value={{ color: "primary", className: "text-3xl" }}
+                >
+                  <AiFillCheckCircle />
+                </IconContext.Provider>
                 <span>Scientifically based</span>
               </li>
               <li className="flex items-center gap-3">
-                <AiFillCheckCircle />
+                <IconContext.Provider
+                  value={{ color: "primary", className: "text-3xl" }}
+                >
+                  <AiFillCheckCircle />
+                </IconContext.Provider>
                 Works in browser and on mobile devices
               </li>
               <li className="flex items-center gap-3">
-                <AiFillCheckCircle />
+                <IconContext.Provider
+                  value={{ color: "primary", className: "text-3xl" }}
+                >
+                  <AiFillCheckCircle />
+                </IconContext.Provider>
                 Illness coping and disease management courses
               </li>
               <li className="flex items-center gap-3">
-                <AiFillCheckCircle />
+                <IconContext.Provider
+                  value={{ color: "primary", className: "text-3xl" }}
+                >
+                  <AiFillCheckCircle />
+                </IconContext.Provider>
                 In-depth studies on rheumatoid arthritis and Bechterew disease
               </li>
             </ul>
@@ -225,10 +255,36 @@ export default function Home() {
         </div>
       </div>
       <div className="h-full bg-[#fbf9f8] mx-auto pt-10 px-32 flex justify-center pb-10">
-        <div className="w-1/2">a</div>
-        <div className="w-1/2">
+        <Animation
+          tag="div"
+          variants={fadeInUp}
+          className="w-1/2 flex justify-center"
+        >
+          <div className="w-3/4">
+            <p className="font-bold font-poppins text-[#055F5B] text-lg">
+              - CONTACT
+            </p>
+            <h2 className="w-8/12 font-bold font-poppins text-primary tracking-wide text-4xl my-5">
+              We look forward to hearing your lovely message!
+            </h2>
+            <p className=" w-8/12 font-poppins text-[#6F7278] text-[18px] mb-5">
+              Would you like to find out more about us, do you have any
+              questions or suggestions? Please send us an email or use our
+              contact form.
+            </p>
+            <button className="rounded-full w-1/2 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 flex gap-3 items-center">
+              <IconContext.Provider
+                value={{ color: "white", className: "text-4xl ml-6" }}
+              >
+                <MdMail />
+              </IconContext.Provider>
+              geek.yuto@gmail.com
+            </button>
+          </div>
+        </Animation>
+        <Animation tag="div" variants={fadeInDown} className="w-1/2">
           <Form />
-        </div>
+        </Animation>
       </div>
     </motion.div>
   );
