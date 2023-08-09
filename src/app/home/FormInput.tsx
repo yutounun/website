@@ -1,16 +1,29 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import Image from "next/image";
+import { IconContext } from "react-icons";
 
 type PropTypes = {
   placeholder: string;
+  className?: string;
+  children?: ReactNode;
 };
 
-const FormInput = ({ placeholder }: PropTypes) => {
+const FormInput = ({ placeholder, className, children }: PropTypes) => {
   return (
-    <input
-      type="text"
-      className="border border-[#caccd1] w-72 bg-white rounded-2xl h-16"
-      placeholder={placeholder}
-    />
+    <span
+      className={`border border-[#caccd1] bg-white flex justify-between items-center rounded-2xl h-16 ${className}`}
+    >
+      <input
+        type="text"
+        className="w-2/3 h-full ml-3"
+        placeholder={placeholder}
+      />
+      <IconContext.Provider
+        value={{ color: "#caccd1", className: "text-3xl mr-3" }}
+      >
+        <div>{children}</div>
+      </IconContext.Provider>
+    </span>
   );
 };
 

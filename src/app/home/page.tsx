@@ -181,7 +181,7 @@ export default function Home() {
           </div>
         </Animation>
       </div>
-      <div className="h-screen flex pt-10 bg-[#fbf9f8]">
+      <div className="h-full pb-10 flex pt-10 bg-[#fbf9f8]">
         <div className="flex justify-center">
           <div className="w-2/3 flex flex-wrap h-80">
             <Impact
@@ -224,7 +224,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen mx-auto pt-10 px-32 flex justify-center pb-10">
+      <div className="h-full bg-[#fbf9f8] mx-auto pt-10 px-32 flex justify-center pb-10">
         <div className="w-1/2">a</div>
         <div className="w-1/2">
           <Form />
