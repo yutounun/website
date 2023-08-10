@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Animation from "./animation.tsx";
+import Animation from "./animation";
 import CompanyLogo from "./CompanyLogo";
 import { AiFillCheckCircle, AiOutlineMail } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
@@ -83,17 +83,17 @@ export default function Home() {
   ];
   return (
     <motion.div initial="initial" animate="animate">
-      <div className="flex">
-        <div className="h-full bg-[#1c3534] w-1/2 pb-20">
+      <div className="lg:flex">
+        <div className="h-full bg-[#1c3534] lg:w-1/2 pb-20">
           <Animation
             tag="div"
             variants={fadeInRight}
-            className="h-[16rem] relative"
+            className="h-[5rem] lg:h-[16rem] relative"
           >
-            <div className="rounded-full h-80 w-80 absolute top-[-8rem] left-[-10rem] bg-[#ff6d3f]"></div>
-            <div className="rounded-full h-80 w-80 absolute top-[-8.4rem] left-[-11rem] bg-[#b7e4c7]"></div>
+            <div className="rounded-full h-30 w-30 lg:h-80 lg:w-80 absolute top-[-8rem] left-[-10rem] bg-[#ff6d3f]"></div>
+            <div className="rounded-full h-30 w-30 lg:h-80 lg:w-80 absolute top-[-8.4rem] left-[-11rem] bg-[#b7e4c7]"></div>
           </Animation>
-          <Animation tag="div" variants={fadeInDown} className="px-20">
+          <Animation tag="div" variants={fadeInDown} className="px-5 lg:px-20">
             <Animation
               tag="p"
               variants={fadeInDown}
@@ -101,37 +101,43 @@ export default function Home() {
             >
               −Hello
             </Animation>
-            <p className="text-[3rem] text-white font-bold">
+            <p className="text-[2rem] lg:text-[3rem] text-white font-bold">
               Move forward to stand out from the crowd with me - my name is Yuto
               and I am a full-stack developer.
             </p>
             <p className="text-white text-xl font-bold my-5">
               Stay with client.
             </p>
-            <Link
-              href="https://bucolic-faloodeh-8def2c.netlify.app/"
-              className="btn h-5 w-1/3 mt-10 bg-[#fc764d] hover:bg-[hsl(14,99%,60%)] text-white "
-            >
-              Learn more
-            </Link>
+            <div className="flex justify-center lg:inline-block lg:w-full">
+              <Link
+                href="https://bucolic-faloodeh-8def2c.netlify.app/"
+                className="btn h-5 w-1/2 lg:w-1/3 mt-10 bg-[#fc764d] hover:bg-[hsl(14,99%,60%)] text-white"
+              >
+                Learn more
+              </Link>
+            </div>
           </Animation>
         </div>
-        <Animation tag="div" variants={fadeInDown} className="w-1/2 relative">
+        <Animation
+          tag="div"
+          variants={fadeInDown}
+          className="lg:w-1/2 relative"
+        >
           <Image src="/dog.jpeg" alt="Picture of the author" layout="fill" />
         </Animation>
       </div>
-      <div className="h-full mx-auto pt-10 px-32">
+      <div className="h-full mx-auto pt-10 lg:px-32">
         <Animation
           tag="p"
           variants={fadeInDown}
-          className="text-2xl  font-bold mx-auto flex justify-center mb-10"
+          className="mx-5 text-2xl  font-bold lg:mx-auto lg:flex justify-center mb-10"
         >
           Our partner network - deeply anchored in science and research .
         </Animation>
         <Animation
           tag="div"
           variants={stagger}
-          className="w-full flex flex-wrap gap-16"
+          className="w-full flex flex-wrap gap-8 mx-10 lg:mx-0 lg:gap-16"
         >
           {companies.map((company) => {
             return (
@@ -144,11 +150,11 @@ export default function Home() {
           })}
         </Animation>
       </div>
-      <div className="h-full mx-auto pt-10 px-32 flex justify-center pb-10">
+      <div className="h-full mx-auto pt-10 lg:px-32 lg:flex justify-center pb-10">
         <Animation
           tag="div"
           variants={scaleUp}
-          className="w-1/2 flex items-center justify-center"
+          className="hidden mx-5 lg:mx-0 lg:w-1/2 lg:flex items-center justify-center"
         >
           <Image
             src="/phone-control.png"
@@ -158,8 +164,8 @@ export default function Home() {
             className="rounded-2xl"
           ></Image>
         </Animation>
-        <Animation tag="div" variants={fadeInUp} className="w-1/2">
-          <div className="w-3/4 mx-10">
+        <Animation tag="div" variants={fadeInUp} className="lg:w-1/2">
+          <div className="lg:w-3/4 mx-10">
             <p className="font-bold  text-[#055F5B] text-lg">
               - DIGITAL PATIENT EDUCATION
             </p>
@@ -171,14 +177,16 @@ export default function Home() {
               Our courses on rheumatism. We will help you to understand your
               illness better and to learn to deal with it more confidently.
             </p>
-            <ul className=" text-primary text-[18px] mb-5 font-medium flex flex-col gap-5">
+            <ul className=" text-primary text-[18px] mb-5 font-medium lg:flex lg:flex-col gap-5">
               <li className="flex items-center gap-3">
                 <IconContext.Provider
                   value={{ color: "primary", className: "text-3xl" }}
                 >
                   <AiFillCheckCircle />
                 </IconContext.Provider>
-                <span>Scientifically based</span>
+                <span className="text-lg w-10/12">
+                  <span>Scientifically based</span>
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <IconContext.Provider
@@ -186,7 +194,9 @@ export default function Home() {
                 >
                   <AiFillCheckCircle />
                 </IconContext.Provider>
-                Works in browser and on mobile devices
+                <span className="text-lg w-10/12">
+                  Works in browser and on mobile devices
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <IconContext.Provider
@@ -194,7 +204,9 @@ export default function Home() {
                 >
                   <AiFillCheckCircle />
                 </IconContext.Provider>
-                Illness coping and disease management courses
+                <span className="text-lg w-10/12">
+                  Illness coping and disease management courses
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <IconContext.Provider
@@ -202,18 +214,22 @@ export default function Home() {
                 >
                   <AiFillCheckCircle />
                 </IconContext.Provider>
-                In-depth studies on rheumatoid arthritis
+                <span className="text-lg w-10/12">
+                  In-depth studies on rheumatoid arthritis
+                </span>
               </li>
             </ul>
-            <button className="rounded-full w-1/2 h-16 bg-[#055f5b] text-white hover:bg-[#0c1c1b] mt-5">
-              Secure Access Now!!
-            </button>
+            <div className="flex justify-center lg:inline-block lg:w-full">
+              <button className="rounded-full w-2/3 lg:w-1/2 h-16 bg-[#055f5b] text-white hover:bg-[#0c1c1b] mt-5">
+                Secure Access Now!!
+              </button>
+            </div>
           </div>
         </Animation>
       </div>
-      <div className="h-full pb-10 flex pt-10 bg-[#fbf9f8] justify-center">
-        <div className="flex justify-center w-1/2">
-          <div className="w-10/12 flex flex-wrap justify-end h-80 gap-10">
+      <div className="pb-10 lg:flex pt-10 bg-[#fbf9f8] justify-center">
+        <div className="h-full flex justify-center lg:w-1/2">
+          <div className="w-10/12 lg:flex lg:flex-wrap justify-center lg:justify-end lg:h-80 gap-0 lg:gap-10">
             <Impact
               title=">6 million"
               content="Those affected alone in Germany."
@@ -232,10 +248,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="w-1/2">
-          <div className="w-8/12 ml-10">
+        <div className="h-full w-full lg:block lg:w-1/2 pt-10">
+          <div className="mx-5 w-9/12 lg:mx-0 lg:w-8/12 ml-10">
             <p className="font-bold text-xl ">- AN INCREASING PROBLEM</p>
-            <h2 className="text-[38px] leading-12 my-10 font-bold">
+            <h2 className="text-4xl lg:text-[38px] leading-12 my-5 lg:my-10 font-bold">
               <span className="text-primary">
                 Due to the lack of doctors, patients often{" "}
               </span>
@@ -253,33 +269,40 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-full bg-[#fbf9f8] mx-auto pt-10 px-32 flex justify-center pb-10">
+      <div className="h-full bg-[#fbf9f8] mx-auto pt-10 lg:lg:px-32 lg:flex justify-center pb-10">
         <Animation
           tag="div"
           variants={fadeInUp}
-          className="w-5/12 flex justify-center"
+          className="lg:w-5/12 lg:flex justify-center mb-10 lg:mb-0"
         >
           <div className="">
-            <p className="font-bold  text-[#055F5B] text-lg">- CONTACT</p>
-            <h2 className="w-10/12 font-bold  text-primary tracking-wide text-4xl my-5">
+            <p className="mx-5 lg:mx-0 font-bold  text-[#055F5B] text-lg">
+              - CONTACT
+            </p>
+            <h2 className="mx-5 lg:mx-0 w-10/12 font-bold  text-primary tracking-wide text-4xl my-5">
               We look forward to hearing your lovely message!
             </h2>
-            <p className=" w-10/12  text-[#6F7278] text-[18px] mb-5">
+            <p className=" w-10/12 mx-5 lg:mx-0 text-[#6F7278] text-[18px] mb-5">
               Would you like to find out more about us, do you have any
               questions or suggestions? Please send us an email or use our
               contact form.
             </p>
-            <button className="rounded-full w-7/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 flex gap-3 items-center">
-              <IconContext.Provider
-                value={{ color: "white", className: "text-4xl ml-6" }}
-              >
-                <MdMail />
-              </IconContext.Provider>
-              geek.yuto@gmail.com
-            </button>
+            <div className="flex justify-center lg:inline-block lg:w-full">
+              <button className="flex rounded-full w-8/12 lg:w-7/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 lg:flex gap-3 items-center">
+                <IconContext.Provider
+                  value={{
+                    color: "white",
+                    className: "text-2xl lg:text-4xl ml-6",
+                  }}
+                >
+                  <MdMail />
+                </IconContext.Provider>
+                <span className="text-lg">geek.yuto@gmail.com</span>
+              </button>
+            </div>
           </div>
         </Animation>
-        <Animation tag="div" variants={fadeInDown} className="w-1/2">
+        <Animation tag="div" variants={fadeInDown} className="lg:w-1/2">
           <Form />
         </Animation>
       </div>
