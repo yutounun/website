@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+
 import Link from "next/link";
 
 import Logo from "../../../public/logo.svg";
@@ -77,7 +77,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
       {/* Logo */}
       <div className="lg:flex w-1/2 my-auto ml-10 pt-9">
         <Link href="/home" className="my-auto">
-          <Image src={Logo} alt={""} className="" />
+          <img src="./logo.svg" alt={""} className="" />
         </Link>
       </div>
       <div className="hidden w-1/2 lg:flex justify-end mr-32 my-auto">

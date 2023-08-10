@@ -1,9 +1,12 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const CompanyLogo = ({ variants, image }: { variants: any; image: string }) => (
   <motion.div variants={variants}>
-    <Image src={image} alt={image} width="130" height="80"></Image>
+    <img
+      src={image}
+      alt={image}
+      style={{ width: "130px", height: "80px" }}
+    ></img>
   </motion.div>
 );
 

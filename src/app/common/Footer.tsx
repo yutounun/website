@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+
 import Link from "next/link";
 
 import Logo from "../../../public/logo.svg";
@@ -10,7 +10,11 @@ const Footer = () => {
     <div className="h-full w-screen flex flex-col lg:flex-row py-5 lg:py-20">
       <div className="hidden lg:w-1/4 lg:flex lg:justify-center items-center">
         <Link href="/home" className="my-auto">
-          <Image src={Logo} alt={""} width="250" height="250" />
+          <img
+            src="./logo.svg"
+            alt={""}
+            style={{ width: "250px", height: "250px" }}
+          />
         </Link>
       </div>
       <div className="lg:w-1/4 ml-5 lg:ml-0 lg:flex justify-center">

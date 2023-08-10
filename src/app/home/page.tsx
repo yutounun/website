@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import Animation from "./animation";
 import CompanyLogo from "./CompanyLogo";
@@ -68,18 +68,18 @@ const stagger = {
 
 export default function Home() {
   const companies = [
-    "microsoft.svg",
-    "spotify.svg",
-    "logo.svg",
-    "tinder.svg",
-    "tiktok.svg",
-    "ethereum.svg",
-    "heineken.svg",
-    "linkedin.svg",
-    "netflix.svg",
-    "slack.svg",
-    "soundcloud.svg",
-    "nike.svg",
+    "./microsoft.svg",
+    "./spotify.svg",
+    "./logo.svg",
+    "./tinder.svg",
+    "./tiktok.svg",
+    "./ethereum.svg",
+    "./heineken.svg",
+    "./linkedin.svg",
+    "./netflix.svg",
+    "./slack.svg",
+    "./soundcloud.svg",
+    "./nike.svg",
   ];
   return (
     <motion.div initial="initial" animate="animate">
@@ -88,16 +88,20 @@ export default function Home() {
           <Animation
             tag="div"
             variants={fadeInRight}
-            className="h-[5rem] lg:h-[16rem] relative"
+            className="hidden lg:inline lg:h-[16rem] relative"
           >
             <div className="rounded-full h-30 w-30 lg:h-80 lg:w-80 absolute top-[-8rem] left-[-10rem] bg-[#ff6d3f]"></div>
             <div className="rounded-full h-30 w-30 lg:h-80 lg:w-80 absolute top-[-8.4rem] left-[-11rem] bg-[#b7e4c7]"></div>
           </Animation>
-          <Animation tag="div" variants={fadeInDown} className="px-5 lg:px-20">
+          <Animation
+            tag="div"
+            variants={fadeInDown}
+            className="px-5 lg:px-20 pt-10 lg:pt-10 lg:mt-40"
+          >
             <Animation
               tag="p"
               variants={fadeInDown}
-              className="text-white text-2xl font-bold my-5"
+              className="text-white text-2xl font-bold mb-5"
             >
               −Hello
             </Animation>
@@ -123,7 +127,11 @@ export default function Home() {
           variants={fadeInDown}
           className="lg:w-1/2 relative"
         >
-          <Image src="/dog.jpeg" alt="Picture of the author" layout="fill" />
+          <img
+            src="./dog.jpeg"
+            alt="Picture of the author"
+            className="absolute h-full w-full object-cover"
+          />
         </Animation>
       </div>
       <div className="h-full mx-auto pt-10 lg:px-32">
@@ -137,7 +145,7 @@ export default function Home() {
         <Animation
           tag="div"
           variants={stagger}
-          className="w-full flex flex-wrap gap-8 mx-10 lg:mx-0 lg:gap-16"
+          className="w-full flex flex-wrap gap-8 mx-5 lg:mx-0 lg:gap-16"
         >
           {companies.map((company) => {
             return (
@@ -156,13 +164,12 @@ export default function Home() {
           variants={scaleUp}
           className="hidden mx-5 lg:mx-0 lg:w-1/2 lg:flex items-center justify-center"
         >
-          <Image
-            src="/phone-control.png"
-            width="500"
-            height="600"
+          <img
+            src="./phone-control.png"
+            style={{ width: "500px", height: "600px" }}
             alt="phone-control"
             className="rounded-2xl"
-          ></Image>
+          ></img>
         </Animation>
         <Animation tag="div" variants={fadeInUp} className="lg:w-1/2">
           <div className="lg:w-3/4 mx-10">
@@ -177,7 +184,7 @@ export default function Home() {
               Our courses on rheumatism. We will help you to understand your
               illness better and to learn to deal with it more confidently.
             </p>
-            <ul className=" text-primary text-[18px] mb-5 font-medium lg:flex lg:flex-col gap-5">
+            <ul className=" text-primary text-[18px] mb-5 font-medium lg:flex lg:flex-col gap-10 lg:gap-5">
               <li className="flex items-center gap-3">
                 <IconContext.Provider
                   value={{ color: "primary", className: "text-3xl" }}
