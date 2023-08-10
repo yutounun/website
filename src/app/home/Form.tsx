@@ -58,7 +58,7 @@ const Form = () => {
           </a>
           .
         </p>
-        <button className="mx-auto bg-primary text-white font-bold text-xl rounded-full w-40 h-16 block">
+        <button className="bg-[#055f5b] btn mx-auto hover:bg-[#0c1c1b] text-white font-bold text-md lg:text-xl rounded-full w-40 h-10 lg:h-16 block">
           Submit
         </button>
       </div>

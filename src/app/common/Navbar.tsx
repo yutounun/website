@@ -77,7 +77,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
       {/* Logo */}
       <div className="lg:flex w-1/2 my-auto ml-10 pt-9">
         <Link href="/home" className="my-auto">
-          <img src="./logo.svg" alt={""} className="" />
+          <img src="./logo.svg" alt="logo" className="" />
         </Link>
       </div>
       <div className="hidden w-1/2 lg:flex justify-end mr-32 my-auto">
@@ -90,14 +90,6 @@ const Navbar = ({ current = "home" }: PropTypes) => {
           Home
         </Link>
         <Link
-          href="/courses"
-          className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-            current === "courses" && "border-b-2 border-b-[#ff6d3f]"
-          }`}
-        >
-          Courses
-        </Link>
-        <Link
           href="/about"
           className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
             current === "about" && "border-b-2 border-b-[#ff6d3f]"
@@ -106,7 +98,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
           About
         </Link>
         <Link
-          href="/blog"
+          href="https://devwhisperer.gatsbyjs.io/"
           className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
             current === "blog" && "border-b-2 border-b-[#ff6d3f]"
           }`}

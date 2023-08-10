@@ -130,7 +130,7 @@ export default function Home() {
           <img
             src="./dog.jpeg"
             alt="Picture of the author"
-            className="absolute h-full w-full object-cover"
+            className="lg:absolute h-full w-full object-cover"
           />
         </Animation>
       </div>
@@ -162,13 +162,12 @@ export default function Home() {
         <Animation
           tag="div"
           variants={scaleUp}
-          className="hidden mx-5 lg:mx-0 lg:w-1/2 lg:flex items-center justify-center"
+          className="mx-5 lg:mx-0 lg:w-1/2 lg:flex items-center justify-center"
         >
           <img
             src="./phone-control.png"
-            style={{ width: "500px", height: "600px" }}
             alt="phone-control"
-            className="rounded-2xl"
+            className="rounded-2xl mb-10 lg:mb-0 lg:h-10/12 lg:w-2/3"
           ></img>
         </Animation>
         <Animation tag="div" variants={fadeInUp} className="lg:w-1/2">
@@ -283,19 +282,19 @@ export default function Home() {
           className="lg:w-5/12 lg:flex justify-center mb-10 lg:mb-0"
         >
           <div className="">
-            <p className="mx-5 lg:mx-0 font-bold  text-[#055F5B] text-lg">
+            <p className="mx-10 lg:mx-0 font-bold  text-[#055F5B] text-lg">
               - CONTACT
             </p>
-            <h2 className="mx-5 lg:mx-0 w-10/12 font-bold  text-primary tracking-wide text-4xl my-5">
+            <h2 className="mx-10 lg:mx-0 w-10/12 font-bold  text-primary tracking-wide text-4xl my-5">
               We look forward to hearing your lovely message!
             </h2>
-            <p className=" w-10/12 mx-5 lg:mx-0 text-[#6F7278] text-[18px] mb-5">
+            <p className=" w-10/12 mx-10 lg:mx-0 text-[#6F7278] text-[18px] mb-5">
               Would you like to find out more about us, do you have any
               questions or suggestions? Please send us an email or use our
               contact form.
             </p>
             <div className="flex justify-center lg:inline-block lg:w-full">
-              <button className="flex rounded-full w-8/12 lg:w-7/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 lg:flex gap-3 items-center">
+              <button className="flex rounded-full w-8/12 lg:w-5/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 lg:flex gap-3 items-center">
                 <IconContext.Provider
                   value={{
                     color: "white",
@@ -304,7 +303,12 @@ export default function Home() {
                 >
                   <MdMail />
                 </IconContext.Provider>
-                <span className="text-lg">geek.yuto@gmail.com</span>
+                <Link
+                  href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=geek.yuto%40gmail.com"
+                  className="text-lg"
+                >
+                  geek.yuto@gmail.com
+                </Link>
               </button>
             </div>
           </div>
