@@ -48,7 +48,7 @@ const Form = () => {
         />
       </form>
       <div className="mb-10">
-        <p className="mx-16 lg:mx-0 mb-10 text-[18px] text-[#6f7278] font-medium ">
+        <p className="mx-16 lg:mx-24 mb-10 text-[18px] text-[#6f7278] font-medium ">
           By clicking on send you agree to{" "}
           <a
             href="https://daisyui.com/components/input/"
