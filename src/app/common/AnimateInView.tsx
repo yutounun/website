@@ -38,12 +38,14 @@ function AnimateInView({
       variants={variants}
       className={className}
       whileHover={
-        hoverScaleUp && {
-          scale: 1.1,
-          transition: { duration: 0.2 },
-        }
+        hoverScaleUp
+          ? {
+              scale: 1.1,
+              transition: { duration: 0.2 },
+            }
+          : undefined
       }
-      whileTap={hoverScaleUp && { scale: 0.9 }}
+      whileTap={hoverScaleUp ? { scale: 0.9 } : undefined}
     >
       {children}
     </motion.div>

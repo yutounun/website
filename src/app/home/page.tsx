@@ -247,7 +247,7 @@ export default function Home() {
                 contact form.
               </p>
               <div className="flex justify-center lg:inline-block lg:w-full">
-                <button className="flex rounded-full w-8/12 lg:w-5/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 lg:flex gap-3 items-center">
+                <button className="flex rounded-full w-8/12 lg:w-7/12 h-16 bg-[#055f5b] text-xl text-white hover:bg-[#0c1c1b] mt-5 lg:flex gap-3 items-center">
                   <IconContext.Provider
                     value={{
                       color: "white",
@@ -258,7 +258,7 @@ export default function Home() {
                   </IconContext.Provider>
                   <Link
                     href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=geek.yuto%40gmail.com"
-                    className="text-lg"
+                    className="text-lg lg:ml-1"
                   >
                     geek.yuto@gmail.com
                   </Link>
