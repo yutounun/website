@@ -5,13 +5,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import Logo from "../../../public/logo.svg";
+import { usePathname } from "next/navigation";
 
-type PropTypes = {
-  current?: string;
-};
-
-const Navbar = ({ current = "home" }: PropTypes) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   return (
     <div className="h-32 lg:flex justify-between border-b sticky w-full top-0 z-50 bg-white">
       {/* Burger Menu */}
@@ -41,31 +39,23 @@ const Navbar = ({ current = "home" }: PropTypes) => {
             <Link
               href="/home"
               className={`text-xl ml-7 w-1/3 font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white h-1/8 ${
-                current === "home" && "border-b-2 border-b-[#ff6d3f]"
+                pathname === "/home" && "border-b-2 border-b-[#ff6d3f]"
               }`}
             >
               Home
             </Link>
             <Link
-              href="/courses"
-              className={`text-xl ml-7 w-1/3 font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-                current === "courses" && "border-b-2 border-b-[#ff6d3f]"
-              }`}
-            >
-              Courses
-            </Link>
-            <Link
               href="/about"
               className={`text-xl ml-7 w-1/3 font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-                current === "about" && "border-b-2 border-b-[#ff6d3f]"
+                pathname === "/about" && "border-b-2 border-b-[#ff6d3f]"
               }`}
             >
               About
             </Link>
             <Link
-              href="/blog"
+              href="https://devwhisperer.gatsbyjs.io/"
               className={`text-xl ml-7 w-1/3 font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-                current === "blog" && "border-b-2 border-b-[#ff6d3f]"
+                pathname === "/blog" && "border-b-2 border-b-[#ff6d3f]"
               }`}
             >
               Blog
@@ -83,8 +73,8 @@ const Navbar = ({ current = "home" }: PropTypes) => {
       <div className="hidden w-1/2 lg:flex justify-end mr-32 my-auto">
         <Link
           href="/home"
-          className={`text-xl ml-7 my-auto  font-normal hoverhover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white ${
-            current === "home" && "border-b-2 border-b-[#ff6d3f]"
+          className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white ${
+            pathname === "/home" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
           Home
@@ -92,7 +82,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
         <Link
           href="/about"
           className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-            current === "about" && "border-b-2 border-b-[#ff6d3f]"
+            pathname === "/about" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
           About
@@ -100,7 +90,7 @@ const Navbar = ({ current = "home" }: PropTypes) => {
         <Link
           href="https://devwhisperer.gatsbyjs.io/"
           className={`text-xl ml-7 my-auto  font-normal hover:border-b-2 hover:border-b-[#ff6d3f] hover:bg-white hover: ${
-            current === "blog" && "border-b-2 border-b-[#ff6d3f]"
+            pathname === "/blog" && "border-b-2 border-b-[#ff6d3f]"
           }`}
         >
           Blog

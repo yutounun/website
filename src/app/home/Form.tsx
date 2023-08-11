@@ -3,6 +3,7 @@ import FormInput from "./FormInput";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { FaRegBuilding } from "react-icons/fa";
 import { GiHumanTarget } from "react-icons/gi";
+import BasicButton from "../common/BasicButton";
 
 const Form = () => {
   return (
@@ -58,9 +59,7 @@ const Form = () => {
           </a>
           .
         </p>
-        <button className="bg-[#055f5b] btn mx-auto hover:bg-[#0c1c1b] text-white font-bold text-md lg:text-xl rounded-full w-40 h-10 lg:h-16 block">
-          Submit
-        </button>
+        <BasicButton className="w-40 h-10">submit</BasicButton>
       </div>
     </div>
   );
