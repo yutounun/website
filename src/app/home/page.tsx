@@ -82,7 +82,7 @@ export default function Home() {
             />
           </AnimateInView>
         </div>
-        <div className="h-full mx-auto pt-10 lg:px-32">
+        <div className="h-full mx-auto pt-10 ml-5 lg:px-32">
           <AnimateInView
             tag="p"
             variants={variants.fadeInDown}
