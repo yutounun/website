@@ -9,11 +9,13 @@ function AnimateInView({
   variants,
   tag,
   className,
+  hoverScaleUp,
 }: {
   children: React.ReactNode;
   variants: any;
   tag: string;
   className: string;
+  hoverScaleUp?: boolean;
 }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -35,6 +37,13 @@ function AnimateInView({
       transition={{ duration: 3 }}
       variants={variants}
       className={className}
+      whileHover={
+        hoverScaleUp && {
+          scale: 1.1,
+          transition: { duration: 0.2 },
+        }
+      }
+      whileTap={hoverScaleUp && { scale: 0.9 }}
     >
       {children}
     </motion.div>

@@ -55,12 +55,24 @@ const stagger = {
   },
 };
 
+const hoverScaleUp = {
+  initial: { scale: 1 },
+  animate: {
+    scale: 1.2,
+    transition: {
+      duration: 1.3,
+      ease: easing,
+    },
+  },
+};
+
 const variants = {
   stagger: stagger,
   fadeInDown: fadeInDown,
   fadeInRight: fadeInRight,
   scaleUp: scaleUp,
   fadeInUp: fadeInUp,
+  hoverScaleUp,
 };
 
 export default variants;

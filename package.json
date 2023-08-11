@@ -30,7 +30,8 @@
     "node": "18.17.0"
   },
   "devDependencies": {
-    "daisyui": "^3.5.0"
+    "daisyui": "^3.5.0",
+    "react-scroll": "^1.8.9"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "next.config.js",
